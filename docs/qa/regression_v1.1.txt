@@ -1,0 +1,24 @@
+== v1.1 REGRESSION RUN: the 112 tests that existed in v1.0 (CR1 suites excluded) ==
+[==========] Running 112 tests from 19 test suites.
+[==========] 112 tests from 19 test suites ran. (841 ms total)
+[  PASSED  ] 112 tests.
+
+== NEW CR1 TESTS ==
+[==========] Running 10 tests from 3 test suites.
+[       OK ] ClassExtension.EveryEnrolledStudentGetsTheNewDeadlineAndOthersDoNot (1 ms)
+[       OK ] ClassExtension.NeverShortensALaterIndividualExtension (1 ms)
+[       OK ] ClassExtension.LaterClassDateReplacesAnEarlierIndividualOne (1 ms)
+[       OK ] ClassExtension.InvalidRequestsAreRejectedAndNothingIsSaved (1 ms)
+[       OK ] ClassExtension.CourseWithNoStudentsGivesAClearError (1 ms)
+[       OK ] ClassExtension.IsAllOrNothingWhenADatabaseWriteFails (1 ms)
+[       OK ] ClassExtension.LateWorkBecomesOnTimeAndIsNotPenalised (1 ms)
+[       OK ] ExtensionDisplay.AssignmentListShowsEffectiveDeadlineAndExtendedFlag (1 ms)
+[       OK ] ClassExtensionUi.LecturerExtendsWholeClassAndStudentsSeeItOnTheirList (1 ms)
+[       OK ] ClassExtensionUi.ShowsWhenALaterIndividualExtensionWasKeptAndRejectsBadChoices (1 ms)
+[==========] 10 tests from 3 test suites ran. (13 ms total)
+[  PASSED  ] 10 tests.
+
+== FULL v1.1 SUITE ==
+[==========] Running 122 tests from 22 test suites.
+[==========] 122 tests from 22 test suites ran. (856 ms total)
+[  PASSED  ] 122 tests.

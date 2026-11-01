@@ -1,0 +1,46 @@
+(INFO) Reading coverage data...
+(INFO) Writing coverage report...
+------------------------------------------------------------------------------
+                           GCC Code Coverage Report
+Directory: .
+------------------------------------------------------------------------------
+File                                       Lines    Exec  Cover   Missing
+------------------------------------------------------------------------------
+src/common/Clock.h                             7       7   100%
+src/common/DateTime.cpp                       49      47    95%   70-71
+src/common/DateTime.h                         14      14   100%
+src/common/Validation.cpp                     33      33   100%
+src/data/Database.cpp                         90      81    90%   47-50,62-63,81,99-100
+src/data/Database.h                            3       3   100%
+src/data/Repositories.h                        9       9   100%
+src/data/SqliteRepositories.cpp              366     353    96%   19,27,40,55,426,451-458
+src/data/SqliteRepositories.h                  9       9   100%
+src/domain/Types.cpp                          43      39    90%   18,34,55,61
+src/domain/User.cpp                           23      22    95%   43
+src/domain/User.h                             23      23   100%
+src/security/PasswordHasher.h                  1       1   100%
+src/security/SodiumPasswordHasher.cpp         45      42    93%   18,50,67
+src/services/AcademicService.cpp              52      51    98%   69
+src/services/AcademicService.h                 7       7   100%
+src/services/AccessControl.cpp                24      24   100%
+src/services/AccessControl.h                   2       2   100%
+src/services/AppContext.h                     19      19   100%
+src/services/AssessmentService.cpp           168     167    99%   193
+src/services/AssessmentService.h              12      12   100%
+src/services/AssignmentService.cpp            84      84   100%
+src/services/AssignmentService.h              10      10   100%
+src/services/AuthService.cpp                  20      20   100%
+src/services/DeadlineResolver.h                5       5   100%
+src/services/SubmissionService.cpp            55      55   100%
+src/services/SubmissionService.h               8       8   100%
+src/services/UserService.cpp                  35      35   100%
+src/services/UserService.h                     2       2   100%
+src/strategy/LatePenalty.cpp                  12      12   100%
+src/strategy/LatePenalty.h                     4       4   100%
+src/ui/ConsoleApp.cpp                        489     398    81%   37-40,48,64,68,95,183-185,216-218,240-242,255-256,290-291,295-296,330-332,335-338,348-353,367-369,372-380,412-413,432-439,441,465-475,511-514,516,525-526,529,562-564,583-587,614-618
+------------------------------------------------------------------------------
+TOTAL                                       1723    1598    92%
+------------------------------------------------------------------------------
+lines: 92.7% (1598 out of 1723)
+functions: 97.8% (263 out of 269)
+branches: 55.4% (1791 out of 3230)

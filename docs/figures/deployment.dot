@@ -1,0 +1,27 @@
+digraph G {
+  rankdir=LR; compound=true; fontname="Helvetica"; nodesep=0.35; ranksep=0.9;
+  node [fontname="Helvetica", fontsize=11, shape=box, style="filled", fillcolor="#ffffff"];
+  edge [fontname="Helvetica", fontsize=10];
+  subgraph cluster_pc {
+    label="<<device>>\nSchool computer (old PC, no internet needed)"; style="filled,rounded"; fillcolor="#eef4fb"; color="#2e75b6"; fontsize=12;
+    subgraph cluster_os {
+      label="<<execution environment>>\nOperating system (Windows / Linux / macOS)"; style="filled,rounded"; fillcolor="#ffffff"; color="#555555"; fontsize=11;
+      exe  [label="<<artifact>>\nlms  (C++17 console application)\nv1.1", fillcolor="#fff7d6"];
+      db   [label="<<artifact>>\nlms.db\n(SQLite database file)", fillcolor="#fff7d6"];
+      log  [label="<<artifact>>\nlms_error.log", fillcolor="#fff7d6"];
+      sql  [label="<<library>>\nSQLite 3", fillcolor="#e8f5e9"];
+      sod  [label="<<library>>\nlibsodium (Argon2id)", fillcolor="#e8f5e9"];
+      exe -> db  [label="reads / writes\n(parameterised SQL)"];
+      exe -> log [label="writes internal errors", style=dashed];
+      exe -> sql [label="links", style=dashed];
+      exe -> sod [label="links", style=dashed];
+    }
+    term [label="<<device>>\nKeyboard and screen\n(console / terminal)", fillcolor="#ffffff"];
+    term -> exe [label="menus and input"];
+  }
+  subgraph cluster_share {
+    label="<<device>> (optional)\nShared network folder / file server"; style="filled,rounded,dashed"; fillcolor="#f6f6f6"; color="#888888"; fontsize=12;
+    files [label="<<artifact>>\nSubmitted student files\n(paths are stored in lms.db)", fillcolor="#ffffff"];
+  }
+  exe -> files [label="<<LAN>> path only,\nno file copy", style=dashed, lhead=cluster_share];
+}
